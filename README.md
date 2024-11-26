@@ -55,7 +55,7 @@ Welcome to the **Arduino Projects Repository**! This repository contains five fu
 ### General Steps  
 1. Assemble the hardware components following the circuit diagrams provided for each project.  
 2. Install the Arduino IDE and connect your Arduino board to your computer.  
-3. Open the code file (`.ino`) for the respective project.  
+3. Write code for the respective project.  
 4. Upload the code to the Arduino board.  
 5. Observe the system behavior as per the experiment objective.  
 
@@ -78,8 +78,12 @@ Traffic management can be inefficient without automated systems, leading to acci
 - Breadboard  
 - Connecting wires  
 
-#### Circuit Design  
-Refer to the `Traffic_Light_Detection_Circuit.png` for detailed wiring instructions.  
+#### Theory of Circuit Design  
+- The Red, Yellow, and Green LEDs are connected to digital pins 12, 11, and 10, respectively.  
+- Resistors (220 ohms) are added in series with each LED to limit the current and protect the 
+  LEDs.  
+- The cathodes of all LEDs are connected to the Arduino GND pin.  
+- Digital pins are programmed to toggle HIGH/LOW to control the LEDs.    
 
 #### Features  
 - Simulates a standard traffic light system.  
@@ -88,8 +92,6 @@ Refer to the `Traffic_Light_Detection_Circuit.png` for detailed wiring instructi
 #### Code Overview  
 The program alternates LEDs to mimic traffic light operation. Delays control the signal duration.  
 
-#### Setup Instructions  
-Follow the [common setup instructions](#common-setup-instructions) and upload the code from `traffic_light.ino`.  
 
 ---
 
@@ -108,9 +110,12 @@ Understanding digital output is fundamental for Arduino projects. This project p
 - Breadboard  
 - Jumper wires  
 
-#### Circuit Design  
-Refer to `LED_Blink_Circuit.png`.  
-
+#### Circuit Design   
+- **LED**: Connected to digital pin 13.  
+- **Resistor (220 ohms)**: Limits current to the LED.  
+- **GND Connection**: The LED's cathode connects to the ground pin.  
+- The Arduino toggles pin 13 HIGH and LOW to turn the LED ON and OFF.
+   
 #### Features  
 - Simple implementation for beginners.  
 - Adjustable blinking speed.  
@@ -118,9 +123,7 @@ Refer to `LED_Blink_Circuit.png`.
 #### Code Overview  
 The program toggles the LED state between ON and OFF with a defined delay.  
 
-#### Setup Instructions  
-Upload the code from `led_blink.ino` and observe the blinking LED.  
-
+ 
 ---
 
 ### 3. Light Detection Using LDR and Arduino  
@@ -138,8 +141,12 @@ Automated light detection is crucial in energy-saving systems and smart homes.
 - Breadboard  
 - Jumper wires  
 
-#### Circuit Design  
-Refer to `LDR_Circuit.png`.  
+#### Circuit Design (Theory)  
+- **LDR and Resistor (10k ohm)**: Form a voltage divider.  
+- **Voltage Divider Output**: Connected to analog pin A0.  
+- **LED**: Indicates light intensity when it crosses a threshold.  
+- As light increases, the LDR's resistance decreases, altering the voltage read by A0.  
+ 
 
 #### Features  
 - Reads light intensity and triggers actions based on thresholds.  
@@ -148,8 +155,6 @@ Refer to `LDR_Circuit.png`.
 #### Code Overview  
 The program reads analog signals from the LDR and activates output pins when thresholds are crossed.  
 
-#### Setup Instructions  
-Upload the code from `ldr_light_detection.ino`. Adjust the threshold in the code as needed.  
 
 ---
 
@@ -169,8 +174,12 @@ Early fire detection is essential for safety in homes and industries. This proje
 - Breadboard  
 - Jumper wires  
 
-#### Circuit Design  
-Refer to `Fire_Alarm_Circuit.png`.  
+#### Circuit Design (Theory)  
+- **Flame Sensor**: Detects the presence of a flame and outputs HIGH/LOW.  
+- **Buzzer**: Connected to pin 8, serves as the alarm.  
+- **Digital Pin 2**: Reads the flame sensor's signal.  
+- The sensor sends a HIGH signal when it detects a flame, triggering the buzzer.  
+
 
 #### Features  
 - Detects flames within a defined range.  
@@ -178,9 +187,6 @@ Refer to `Fire_Alarm_Circuit.png`.
 
 #### Code Overview  
 Reads digital input from the flame sensor and triggers an alarm (buzzer) when fire is detected.  
-
-#### Setup Instructions  
-Upload the code from `fire_detection_alarm.ino` and test the flame sensor.  
 
 ---
 
@@ -201,18 +207,19 @@ Efficient water usage is critical, especially in areas prone to scarcity. This p
 - Breadboard  
 - Jumper wires  
 
-#### Circuit Design  
-Refer to `Water_Level_Detection_Circuit.png`.  
+#### Circuit Design (Theory)  
+- **Water Level Sensor**: Connected to analog pin A0 to measure water level.  
+- **Indicator LED/Buzzer**: Gives visual or audio alerts.  
+- **Resistors**: Adjust the signal from the water sensor for safe reading by the Arduino.  
+- When the water level crosses a threshold, the Arduino toggles the LED or buzzer.  
+
 
 #### Features  
 - Detects water levels and provides alerts.  
 - Indicates levels using LEDs or buzzer.  
 
 #### Code Overview  
-Reads input from the water level sensor and triggers alerts for predefined levels.  
-
-#### Setup Instructions  
-Upload the code from `water_level_detection.ino` and observe sensor responses.  
+Reads input from the water level sensor and triggers alerts for predefined levels.   
 
 ---  
 
