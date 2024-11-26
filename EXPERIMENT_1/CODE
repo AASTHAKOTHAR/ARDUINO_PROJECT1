@@ -1,0 +1,23 @@
+int rojo=12; //It defines the value of the pin for the red led 
+int amarillo=11; //It defines the value of the pin for the yellow led 
+int verde=10; //It defines the value of the pin for the green led 
+//** Programa **// 
+void setup() { //declarations 
+  pinMode(verde,OUTPUT);//It declares the green pin as output 
+  pinMode(amarillo,OUTPUT);//It declares the yellow pin as output 
+  pinMode(rojo,OUTPUT); //It declares the red pin as output  
+}  
+void loop() { //repeat loop continuously 
+  digitalWrite(verde,HIGH); //It turns on the green led 
+  delay(15000); //wait 15 seconds 
+  digitalWrite(verde,LOW); //It turns off the green led 
+  delay(250); //wait 0.25 seconds
+  digitalWrite(amarillo,HIGH); //It turns on the yellow led  
+  delay(3000); //wait 3 seconds 
+  digitalWrite(amarillo,LOW); //It turns off the yellow led 
+  delay(250); //wait 0.25 seconds
+  digitalWrite(rojo,HIGH); //It turns the red led 
+  delay(15000); //wait 15 seconds 
+  digitalWrite(rojo,LOW); //It turns off the red led 
+  delay(250); //wait 0.25 seconds 
+} 
