@@ -278,3 +278,8 @@ We would like to extend our gratitude to:
 - **Contributors:** Everyone who contributed ideas, feedback, and support for these projects.  
 
 Let’s innovate and create with Arduino! 🚀  
+# Contributors
+1) Aastha Kothari : [GitHub](https://github.com/AASTHAKOTHAR)
+2) Siddhima Singh : [GitHub](https://github.com/siddhima-singh)
+3) Lakshya Sharma : [GitHub](https://github.com/lakshya603)
+
