@@ -48,7 +48,8 @@ Welcome to the **Arduino Projects Repository**! This repository contains five fu
 - Power supply (USB or battery)  
 - Experiment-specific components (detailed in each section)  
 
-### Software Requirements  
+### Software Requirements 
+- Programming Language: Python
 - [Arduino IDE](https://www.arduino.cc/en/software)  
 
 ### General Steps  
